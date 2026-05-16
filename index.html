@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+  </script>
+  <style>
+         body {             
+            background-image: url("./img/gato.jpg");
+            background-repeat: no-repeat;
+            background-position: 30% 70%;
+            background-size: cover;
+            background-attachment: fixed;                  
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #f3d66e;
+            font-style: italic;   
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 1px 1px 0 rgb(0 0 0), -1px -1px 0 rgb(0 0 0), 1px -1px 0 rgb(0 0 0), -1px 1px 0 rgb(0 0 0);
+        }
+
+        h4 {
+          font-size: 30px;
+          font-weight: bold;
+          color: #f3d66e;
+          font-style: italic;   
+          text-align: center;
+          text-shadow: 1px 1px 0 rgb(0 0 0), -1px -1px 0 rgb(0 0 0), 1px -1px 0 rgb(0 0 0), -1px 1px 0 rgb(0 0 0);
+        }
+
+        button, input {
+          background-color: #585742;
+          color: #d4be71;
+        }
+
+        input {
+          width: 260px;
+          max-width: 100%;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          text-align: center;
+        }
+
+        #responda {
+          text-align: center;
+          color: #ffffff;
+          text-shadow: 1px 1px 2px rgb(0 0 0), -1px -1px 2px rgb(0 0 0);
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 36px;
+            }
+            h4 {
+                font-size: 24px;
+            }
+
+            fieldset {
+                justify-content: flex-end !important;
+                height: 70vh !important; 
+                padding-bottom: 30px !important;
+            }
+
+            .flex-row {
+                flex-direction: column !important;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .flex-col {
+                align-items: center;
+                margin-top: 16px !important;
+            }
+
+            input, button {
+                font-size: 20px !important;
+                width: 280px;
+            }
+
+            #responda {
+                font-size: 24px !important;
+                margin-top: 12px !important;
+            }
+        }
+  </style>
+  <title>JS - 6.7</title>
+</head>
+  
+<body class="h-screen">
+      
+      <h1>Ejercicio 4.7</h1>
+      <h4>Múltiplos</h4>
+
+      <fieldset class="flex flex-col justify-center items-center w-full h-3/4 pb-10">        
+        <div class="flex flex-row mt-auto space-x-4">
+            <input id="dividendo" type="number" class="border-2 rounded-lg pl-4 text-2xl" placeholder="escribe un numero">
+            <input id="divisor" type="number" class="border-2 rounded-lg pl-4 text-2xl" placeholder="escribe otro numero">
+        </div> 
+
+        <div class="flex flex-col mt-8">
+            <button onclick="result()" id="btn" class="border-2 rounded-lg px-4 py-2 text-2xl">
+                calcular
+            </button>    
+            <p id="responda" class="mt-5 text-3xl"></p>
+        </div>
+     </fieldset>      
+         
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
+
